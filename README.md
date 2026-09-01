@@ -86,17 +86,23 @@ The project reports both classification and localization performance:
 └── README.md
 ```
 
-## Dataset Format
+## Dataset
 
-The dataset itself is not included. Expected structure:
+This project uses a small single-object detection dataset containing three classes:
 
-```text
-dataset/
-├── images/
-│   ├── airplane/
-│   ├── face/
-│   └── motorcycle/
-└── annotations/
+- airplane
+- face
+- motorcycle
+
+Each image contains one annotated object with one bounding box.
+
+The dataset is included in this repository under:
+
+`dataset/images/`
+
+and the corresponding annotations are stored in:
+
+`dataset/annotations/`
 ```
 
 Each annotation CSV row should use:
