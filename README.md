@@ -88,22 +88,32 @@ The project reports both classification and localization performance:
 
 ## Dataset
 
-This project uses a small single-object detection dataset containing three classes:
+This project uses a three-class subset of the CALTECH-101 dataset containing:
 
-- airplane
-- face
-- motorcycle
+- Airplane
+- Face
+- Motorcycle
 
-Each image contains one annotated object with one bounding box.
+The prepared subset and bounding-box annotations follow the dataset used in the PyImageSearch multi-class object detection and bounding-box regression tutorial.
 
-The dataset is included in this repository under:
+Source:
+https://pyimagesearch.com/2020/10/12/multi-class-object-detection-and-bounding-box-regression-with-keras-tensorflow-and-deep-learning/
 
-`dataset/images/`
+The original images are derived from the CALTECH-101 dataset:
+https://data.caltech.edu/records/mzrjq-6wc02
 
-and the corresponding annotations are stored in:
+The dataset is not included in this repository. The expected local structure is:
 
-`dataset/annotations/`
-```
+```text
+dataset/
+├── annotations/
+│   ├── airplane.csv
+│   ├── face.csv
+│   └── motorcycle.csv
+└── images/
+    ├── airplane/
+    ├── face/
+    └── motorcycle/
 
 Each annotation CSV row should use:
 
